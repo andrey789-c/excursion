@@ -3,19 +3,37 @@ const sliderItems = document.querySelector('.slider__items')
 const {width} = slider.getBoundingClientRect()
 const offsetWidth = window.outerWidth
 
+
+
 slider.addEventListener('mousemove', e => {
-    let x = e.clientX / 5
     if(window.innerWidth > 768) {
-        if(x > 0 && x <= width) {
-            sliderItems.style.transform = `translateX(-${x}px)`
+        let x = e.x / (slider.scrollWidth) * 100
+        if(e.x <= width / 2) {
+            let width2 = e.x - width /2
+            let x2 = width2 / slider.scrollWidth * 100
+            console.log(x2);
+            sliderItems.style.transform = `translateX(${-x2 * 3.5}%)`
+        } else {
+            sliderItems.style.transform = `translateX(-${x * 0.9}%)`
         }
     }
     
 })
 
+
+
+
+
+
+
+
+
+
+
 slider.addEventListener('mouseleave', e => {
-    sliderItems.style.transform = 'translateX(-69px)'
-    
+    if(window.innerWidth > 768) {
+        sliderItems.style.transform = `translateX(0px)`
+    }
 })
 
 // смена карты

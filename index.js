@@ -12,7 +12,7 @@ slider.addEventListener('mousemove', e => {
             let width2 = e.x - width /2
             let x2 = width2 / slider.scrollWidth * 100
             console.log(x2);
-            sliderItems.style.transform = `translateX(${-x2 * 3.5}%)`
+            sliderItems.style.transform =`translateX(${-x2 * 3.5}%)`
         } else {
             sliderItems.style.transform = `translateX(-${x * 0.9}%)`
         }

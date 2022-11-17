@@ -454,9 +454,7 @@ body {
 .map__wrap {
   position: relative;
 }
-.map__transport-view {
-  display: none;
-}
+
 .map__transport {
   position: absolute;
   bottom: 7px;
@@ -467,7 +465,9 @@ body {
   align-items: end;
   justify-content: space-between;
 }
-
+.map__transport-view {
+  display: none;
+}
 .map__transport-block {
   width: 29.1%;
   display: flex;
@@ -579,11 +579,15 @@ body {
     display: none;
   }
   .map__transport-block {
+    position: relative;
     text-align: center;
     display: block;
     width: 100%;
     padding: 0 12px; 
     margin: 0 0 32px 0;
+  }
+  .map__transport-view {
+    position: relative;
   }
   .map__transport-block img{
     margin: 0 0 12px 0;

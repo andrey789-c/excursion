@@ -259,8 +259,9 @@ body {
   transition: all .4s;
 }
 .slider__img {
+  flex-grow: 1;
   width: 22.5%;
-  /* height: 450px; */
+  max-height: 450px;
   margin: 0 5px;
 }
 .slider img:nth-child(1) {

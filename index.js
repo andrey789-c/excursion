@@ -20,16 +20,6 @@ slider.addEventListener('mousemove', e => {
     
 })
 
-
-
-
-
-
-
-
-
-
-
 slider.addEventListener('mouseleave', e => {
     if(window.innerWidth > 768) {
         sliderItems.style.transform = `translateX(0px)`

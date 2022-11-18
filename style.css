@@ -1,5 +1,6 @@
 @import "https://fonts.fontstorage.com/import/bebasneue.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 *{
     padding: 0;
@@ -145,7 +146,7 @@ body {
   line-height: 131.9%;
   color: rgba(229, 229, 229, 0.6);
   width: 90%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .block__photo {
@@ -256,14 +257,13 @@ body {
 .slider__items {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   transition: all .4s;
 }
 .slider__img {
-  display: block;
-  flex-grow: 1;
   width: 22.5%;
-  max-height: 450px;
   margin: 0 5px;
+  vertical-align: top;
 }
 .slider img:nth-child(1) {
   transform: rotate(-2.85deg);
@@ -316,6 +316,9 @@ body {
     width: 100%;
     justify-content: start;
   }
+  .slider__img {
+    width: 148px;
+  }
 }
 
 /* active */
@@ -347,10 +350,11 @@ body {
   width: 22.2%;
   background: #1C1C1D;
   padding: 36px 12px 20px 12px;
+  position: relative;
 }
 
 .map__warning {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 131.9%;
@@ -359,7 +363,7 @@ body {
   margin: 0 0 8px 0;
 }
 .map__phone {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 131.9%;
@@ -380,7 +384,7 @@ body {
   color: rgba(229, 229, 229, 0.4);
 }
 .map__bus {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 131.9%;
@@ -398,7 +402,7 @@ body {
 }
 
 .map__route-block {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 0 0 28px 0;
 }
 .map__route-start {
@@ -412,7 +416,14 @@ body {
   line-height: 131.9%;
   color: rgba(229, 229, 229, 0.4);
 }
-
+.map__bottom {
+  display: inline-block;
+  bottom: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  padding: 0 12px;
+}
 .map__line {
   width: 100%;
   height: 1.5px;
@@ -421,10 +432,10 @@ body {
 }
 
 .map__data {
-  padding: 0 18px;
+  margin: 0 18px;
   display: flex;
   justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .map__distance-title {
   font-size: 16px;
@@ -470,6 +481,7 @@ body {
   width: 29.1%;
   display: flex;
   align-items: start;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .map__transport-block img {
   margin: 0 12px 0 0;
@@ -479,13 +491,23 @@ body {
   font-size: 16px;
   line-height: 131.9%;
   color: #686869;
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .map__contact {
   display: none;
 }
 @media (max-width: 1320px) {
+  .map__info {
+    padding-bottom: 150px;
+  }
   .map__data {
     display: block;
+  }
+  .map__bottom {
+    display: inline-block;
+    height: 150px;
+    vertical-align: bottom;
   }
   .map__distance-num {
     margin: 0;

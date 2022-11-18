@@ -85,7 +85,10 @@ window.addEventListener('resize', e => {
         }
     }
 
-    
+    document.querySelectorAll('.slider__img').forEach(img => {
+        img.style.width = widthImg
+        img.style.height = widthImg + 100 / 0.72 +'px'
+    })
 })
 
 let widthImg = document.querySelectorAll('.slider__img')[0].offsetWidth

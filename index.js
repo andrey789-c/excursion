@@ -7,10 +7,10 @@ const offsetWidth = window.outerWidth
 
 slider.addEventListener('mousemove', e => {
     if(window.innerWidth > 768) {
-        let x = (width / 2 - e.x) / (slider.scrollWidth) * 100
+        let x = (width / 2 - e.x) / (slider.scrollWidth) * 200
         if(e.x <= width / 2) {
             let width2 = e.x - width
-            let x2 = width2 / slider.scrollWidth * 100
+            let x2 = width2 / slider.scrollWidth * 200
             if(sliderItems.getBoundingClientRect().x < 0) {
                 sliderItems.style.transform =`translateX(0)`
             } else {
@@ -84,16 +84,4 @@ window.addEventListener('resize', e => {
             document.querySelector('#adler').style.display = 'flex'
         }
     }
-
-    document.querySelectorAll('.slider__img').forEach(img => {
-        img.style.width = widthImg
-        img.style.height = widthImg + 100 / 0.72 +'px'
-    })
-})
-
-let widthImg = document.querySelectorAll('.slider__img')[0].offsetWidth
-
-document.querySelectorAll('.slider__img').forEach(img => {
-    img.style.width = widthImg
-    img.style.height = widthImg + 100 / 0.72 +'px'
 })

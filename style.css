@@ -376,6 +376,7 @@ body {
 .map__phone {
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 700;
+  display: block;
   font-size: 20px;
   line-height: 131.9%;
   letter-spacing: 0.04em;
@@ -496,9 +497,11 @@ body {
 }
 .map__transport-block img {
   margin: 0 12px 0 0;
+  width: 11%;
 }
 
 .map__transport-block span {
+  width: 90%;
   font-size: 16px;
   line-height: 131.9%;
   color: #686869;
